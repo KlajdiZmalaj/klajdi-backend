@@ -6,7 +6,7 @@ app.use(require("body-parser").json());
 //routes
 app.set("port", process.env.PORT || 5000);
 
-app.use("api/", require("./routes/projects"));
+app.use("/api", require("./routes/projects"));
 
 //db connect
 mongoose.connect(
