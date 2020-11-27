@@ -6,11 +6,7 @@ app.use(require("body-parser").json());
 //routes
 app.set("port", process.env.PORT || 5000);
 
-app.use("/projects", require("./routes/projects"));
-
-app.get("/", function (req, res) {
-  res.send("Hello...");
-});
+app.use("api/", require("./routes/projects"));
 
 //db connect
 mongoose.connect(
