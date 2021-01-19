@@ -3,13 +3,12 @@ const mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 module.exports = mongoose.model(
-  "Projects",
+  "Slider",
   new Schema(
     {
-      slider: Array,
-      projects: Array,
-      projectswork: Array,
+      id: Number,
+      slide: String,
     },
-    { collection: "klajdicollection" }
+    { collection: "Slider" }
   )
 );
